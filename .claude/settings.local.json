@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "WebFetch(domain:api.anthropic.com)",
+      "Bash(curl -s \"https://api.anthropic.com/v1/design/h/CQBPlxe7E3EKtFkKBpTw3w\" -o /tmp/design.zip)",
+      "Read(//tmp/**)",
+      "Bash(unzip -l /tmp/design.zip)",
+      "Read(//c/tmp/**)",
+      "Bash(gunzip -c design.zip)",
+      "Bash(tar -xzf design.zip)",
+      "Bash(npx tsc *)",
+      "Bash(git remote *)",
+      "Bash(git add *)"
+    ]
+  }
+}
