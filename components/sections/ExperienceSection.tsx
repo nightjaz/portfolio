@@ -2,34 +2,44 @@
 
 import { motion } from "framer-motion";
 
-const experiences = [
+const experienceGroups = [
   {
-    co: "AI Gurukul",
-    role: "AI Research Intern",
-    period: "May — Aug 2025",
-    desc: "Benchmarked open-source LLMs (LLaMA family) for educational Q&A using RAG pipelines. Evaluated with RAGAS + BLEU; integrated LlamaIndex for retrieval.",
-    stack: ["Python", "LLaMA", "RAG", "LlamaIndex"],
+    year: "2025",
+    roles: [
+      {
+        co: "AI Gurukul",
+        role: "AI Research Intern",
+        period: "May — Aug",
+        desc: "Benchmarked open-source LLMs (LLaMA family) for educational Q&A using RAG pipelines. Evaluated with RAGAS + BLEU; integrated LlamaIndex for retrieval.",
+        stack: ["Python", "LLaMA", "RAG", "LlamaIndex"],
+      },
+      {
+        co: "FuturixAI",
+        role: "Product Lead",
+        period: "Jan — Jul",
+        desc: "Drove product strategy and AI feature design with emphasis on user experience. Led competitive analysis and mapped strategic decisions based on insights.",
+        stack: ["Strategy", "AI/ML", "UX"],
+      },
+    ],
   },
   {
-    co: "FuturixAI",
-    role: "Product Lead",
-    period: "Jan — Jul 2025",
-    desc: "Drove product strategy and AI feature design with emphasis on user experience. Led competitive analysis and mapped strategic decisions based on insights.",
-    stack: ["Strategy", "AI/ML", "UX"],
-  },
-  {
-    co: "IISER",
-    role: "Data Analysis Intern",
-    period: "Jun — Jul 2024",
-    desc: "Analyzed solar CME datasets to uncover correlations for space weather prediction. Time-series analysis on preprocessed NASA data.",
-    stack: ["Python", "Pandas", "NumPy"],
-  },
-  {
-    co: "Sensesemi Technologies",
-    role: "Summer Intern",
-    period: "May — Jul 2024",
-    desc: "Designed 1D CNN + Time Series UNet models for blood pressure estimation. Engineered lightweight PTT-based algorithm for real-time BP prediction.",
-    stack: ["Python", "Deep Learning", "DSP"],
+    year: "2024",
+    roles: [
+      {
+        co: "IISER",
+        role: "Data Analysis Intern",
+        period: "Jun — Jul",
+        desc: "Analyzed solar CME datasets to uncover correlations for space weather prediction. Time-series analysis on preprocessed NASA data.",
+        stack: ["Python", "Pandas", "NumPy"],
+      },
+      {
+        co: "Sensesemi",
+        role: "Summer Intern",
+        period: "May — Jul",
+        desc: "Designed 1D CNN + Time Series UNet models for blood pressure estimation. Engineered lightweight PTT-based algorithm for real-time BP prediction.",
+        stack: ["Python", "Deep Learning", "DSP"],
+      },
+    ],
   },
 ];
 
@@ -73,7 +83,7 @@ export default function ExperienceSection() {
         }}
       />
 
-      <div className="container max-w-4xl mx-auto px-6 relative z-10">
+      <div className="container max-w-5xl mx-auto px-6 relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -124,67 +134,91 @@ export default function ExperienceSection() {
           </p>
         </motion.div>
 
-        {/* Timeline */}
+        {/* Timeline - concurrent roles side by side */}
         <div className="relative">
-          {/* Vertical line with gold glow */}
+          {/* Vertical line - centered */}
           <div
-            className="absolute left-[24px] top-3 bottom-3 w-px"
+            className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px hidden md:block"
+            style={{
+              background: "linear-gradient(180deg, #f0c878, #c9a85a, rgba(201,168,90,0.1))",
+              boxShadow: "0 0 8px rgba(212,168,90,0.4)",
+            }}
+          />
+          {/* Mobile: left-aligned line */}
+          <div
+            className="absolute left-[24px] top-0 bottom-0 w-px md:hidden"
             style={{
               background: "linear-gradient(180deg, #f0c878, #c9a85a, rgba(201,168,90,0.1))",
               boxShadow: "0 0 8px rgba(212,168,90,0.4)",
             }}
           />
 
-          {experiences.map((exp, i) => (
-            <motion.div
-              key={exp.co}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="relative pl-[72px]"
-              style={{ paddingBottom: i === experiences.length - 1 ? 0 : 56 }}
-            >
-              {/* Node */}
-              <div
-                className="absolute left-[18px] top-[6px] w-[13px] h-[13px] rounded-full bg-gold-bright"
-                style={{ boxShadow: "0 0 12px rgba(240,200,120,0.6)" }}
-              />
-              {/* Horizontal connector */}
-              <div className="absolute left-[24px] top-[12px] w-9 h-px bg-gold-shimmer/60" />
-
-              {/* Period */}
-              <div className="font-mono text-[10px] tracking-[0.25em] uppercase text-gold-shimmer mb-2">
-                {exp.period}
-              </div>
-
-              {/* Company & Role */}
-              <div className="flex flex-wrap items-baseline gap-3 mb-2">
-                <h3 className="heading-editorial text-2xl md:text-3xl text-text-primary">
-                  {exp.co}
-                </h3>
-                <span className="heading-editorial italic text-lg md:text-xl text-gold-shimmer">
-                  — {exp.role}
+          {experienceGroups.map((group, gi) => (
+            <div key={group.year} className={gi > 0 ? "mt-16" : ""}>
+              {/* Year marker - centered on timeline */}
+              <div className="relative flex justify-center mb-8">
+                <div
+                  className="hidden md:block absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-gold-bright"
+                  style={{ boxShadow: "0 0 12px rgba(240,200,120,0.6)" }}
+                />
+                <span className="relative z-10 font-mono text-sm tracking-[0.3em] uppercase text-gold-shimmer bg-ocean-deep px-4 py-1">
+                  {group.year}
                 </span>
               </div>
 
-              {/* Description */}
-              <p className="body-clean text-text-secondary text-sm leading-relaxed max-w-2xl mb-4">
-                {exp.desc}
-              </p>
-
-              {/* Stack tags */}
-              <div className="flex flex-wrap gap-2">
-                {exp.stack.map((s) => (
-                  <span
-                    key={s}
-                    className="font-mono text-[10px] px-2 py-1 border border-lavender-mist/20 text-lavender-mist/80 tracking-wide"
+              {/* Two roles side by side */}
+              <div className="relative flex flex-col md:flex-row md:gap-16">
+                {group.roles.map((exp, i) => (
+                  <motion.div
+                    key={exp.co}
+                    initial={{ opacity: 0, x: i === 0 ? -20 : 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: i * 0.1 }}
+                    className={`relative flex-1 pl-[72px] md:pl-0 mb-8 md:mb-0 ${
+                      i === 0 ? "md:pr-8 md:text-right" : "md:pl-8"
+                    }`}
                   >
-                    {s}
-                  </span>
+                    {/* Mobile node */}
+                    <div
+                      className="absolute left-[18px] top-[6px] w-[13px] h-[13px] rounded-full bg-gold-bright md:hidden"
+                      style={{ boxShadow: "0 0 12px rgba(240,200,120,0.6)" }}
+                    />
+                    <div className="absolute left-[24px] top-[12px] w-9 h-px bg-gold-shimmer/60 md:hidden" />
+
+                    {/* Period */}
+                    <div className="font-mono text-[10px] tracking-[0.25em] uppercase text-gold-shimmer mb-2">
+                      {exp.period}
+                    </div>
+
+                    {/* Company & Role */}
+                    <h3 className="heading-editorial text-2xl text-text-primary mb-1">
+                      {exp.co}
+                    </h3>
+                    <p className="heading-editorial italic text-base text-gold-shimmer mb-3">
+                      {exp.role}
+                    </p>
+
+                    {/* Description */}
+                    <p className="body-clean text-text-secondary text-sm leading-relaxed mb-4">
+                      {exp.desc}
+                    </p>
+
+                    {/* Stack tags */}
+                    <div className={`flex flex-wrap gap-2 ${i === 0 ? "md:justify-end" : ""}`}>
+                      {exp.stack.map((s) => (
+                        <span
+                          key={s}
+                          className="font-mono text-[10px] px-2 py-1 border border-lavender-mist/20 text-lavender-mist/80 tracking-wide"
+                        >
+                          {s}
+                        </span>
+                      ))}
+                    </div>
+                  </motion.div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

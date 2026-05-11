@@ -151,7 +151,7 @@ export default function ProjectsSection() {
         }}
       />
 
-      <div className="container max-w-6xl mx-auto px-6 relative z-10">
+      <div className="container max-w-7xl mx-auto px-6 relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -178,7 +178,7 @@ export default function ProjectsSection() {
         </motion.div>
 
         {/* Project Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {projects.map((project, i) => (
             <ProjectCard
               key={project.id}

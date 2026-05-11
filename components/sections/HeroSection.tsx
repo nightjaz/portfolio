@@ -66,35 +66,53 @@ export default function HeroSection() {
             AI systems · full-stack products · applied ML
           </motion.p>
 
-          {/* Main headline */}
+          {/* Main headline - Name */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="heading-editorial text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-8 leading-[1.15]"
+            className="heading-editorial text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-3 leading-normal"
           >
-            <span className="block gradient-text-gold pb-2">Mapping the invisible</span>
-            <span className="block text-lavender-mist">with code.</span>
+            <span className="block gradient-text-gold pb-2">Prajakta Bandgar</span>
           </motion.h1>
+
+          {/* Institution */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="text-lg md:text-xl text-lavender-mist mb-6 tracking-wide"
+          >
+            BITS Pilani, Goa
+          </motion.p>
+
+          {/* Tagline */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+            className="heading-editorial text-2xl sm:text-3xl md:text-4xl text-lavender-mist mb-8"
+          >
+            Mapping the invisible with code.
+          </motion.p>
 
           {/* Supporting copy */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
+            transition={{ delay: 0.7, duration: 0.8 }}
             className="body-clean text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-6 leading-relaxed"
           >
-            I&apos;m Prajakta Bandgar, an engineering student focused on ML/AI
-            engineering and full-stack product development. I build products where
-            AI has a job to do — turning messy real-world data into clear, usable
-            systems.
+            An engineering student focused on ML/AI engineering and full-stack
+            product development. I build products where AI has a job to do —
+            turning messy real-world data into clear, usable systems.
           </motion.p>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.8 }}
-            className="body-clean text-text-muted max-w-xl mx-auto mb-12"
+            transition={{ delay: 0.8, duration: 0.8 }}
+            className="body-clean text-text-muted max-w-xl mx-auto mb-10"
           >
             My work spans AI finance tools, neuromorphic image processing, biomedical
             signal prototypes, and LLM evaluation.
@@ -105,7 +123,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 0.8 }}
-            className="flex flex-wrap justify-center gap-4 mb-16"
+            className="flex flex-wrap justify-center gap-4 mb-10"
           >
             <a
               href="#projects"

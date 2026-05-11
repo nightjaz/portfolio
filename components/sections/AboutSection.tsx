@@ -44,8 +44,8 @@ export default function AboutSection() {
         </h2>
 
         <p className="body-clean text-[#1a2850] text-lg leading-relaxed mb-6">
-          I&apos;m Prajakta, an engineering student interested in ML/AI engineering
-          and product-minded software development.
+          I&apos;m Prajakta, an engineering student at BITS Pilani, Goa, interested
+          in ML/AI engineering and product-minded software development.
         </p>
 
         <p className="body-clean text-[#2d3a52] leading-relaxed mb-6">
