@@ -66,7 +66,7 @@ export default function FooterSection() {
             />
           </a>
           <a
-            href="https://linkedin.com/in/prajakta-bandgar"
+            href="https://www.linkedin.com/in/prajakta-bandgar-2bb6a92a6/"
             target="_blank"
             rel="noopener noreferrer"
             className="group p-4 bg-deep-space/40 backdrop-blur-xl border border-gold-shimmer/20 rounded-xl hover:border-gold-shimmer/40 hover:bg-deep-space/60 transition-all"
