@@ -115,9 +115,7 @@ The system catches 93.33% of abnormal heart sounds — meaning it would miss onl
       { key: "89.4%", value: "Specificity" },
     ],
     tags: ["Python", "scikit-learn", "XGBoost", "librosa", "SMOTE", "PyTorch"],
-    links: {
-      github: "https://github.com/nightjaz",
-    },
+    links: {},
   },
 
   bp: {

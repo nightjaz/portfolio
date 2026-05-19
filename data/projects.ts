@@ -30,9 +30,7 @@ export const projects: Project[] = [
       { label: "Accuracy", value: "89.2%" },
       { label: "AUC-ROC", value: "0.97" },
     ],
-    links: {
-      github: "https://github.com/nightjaz",
-    },
+    links: {},
     featured: true,
   },
   {

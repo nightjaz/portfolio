@@ -12,7 +12,7 @@ import WaterRipple from "@/components/effects/WaterRipple";
 
 export default function Home() {
   return (
-    <main className="relative">
+    <main className="relative overflow-x-hidden">
       {/* Global Effects */}
       <ScrollGradient />
       <CursorGlow />

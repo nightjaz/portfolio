@@ -35,7 +35,7 @@ export default function Navigation() {
           <div className="flex items-center gap-2 px-2 py-2 rounded-full bg-deep-space/60 backdrop-blur-xl border border-gold-shimmer/20 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
             <a
               href="#"
-              className="px-4 py-2 heading-editorial text-lg text-gold-shimmer hover:text-gold-bright transition-colors"
+              className="px-4 py-2 heading-editorial text-lg leading-none text-gold-shimmer hover:text-gold-bright transition-colors"
             >
               PB
             </a>
