@@ -54,7 +54,7 @@ export default function FooterSection() {
         {/* Links */}
         <div className="flex justify-center items-center gap-4 mb-12">
           <a
-            href="https://github.com/prajakta-bandgar"
+            href="https://github.com/nightjaz"
             target="_blank"
             rel="noopener noreferrer"
             className="group p-4 bg-deep-space/40 backdrop-blur-xl border border-gold-shimmer/20 rounded-xl hover:border-gold-shimmer/40 hover:bg-deep-space/60 transition-all"

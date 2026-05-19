@@ -31,7 +31,7 @@ export const projects: Project[] = [
       { label: "AUC-ROC", value: "0.97" },
     ],
     links: {
-      github: "https://github.com/prajakta-bandgar",
+      github: "https://github.com/nightjaz",
     },
     featured: true,
   },
@@ -76,7 +76,7 @@ export const projects: Project[] = [
     category: "hardware",
     techStack: ["Embedded C++", "Arduino", "Kalman Filter", "I2C", "BMP180", "MPU6050"],
     links: {
-      github: "https://github.com/prajakta-bandgar",
+      github: "https://github.com/nightjaz",
     },
     featured: true,
   },

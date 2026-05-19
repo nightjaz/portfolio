@@ -116,7 +116,7 @@ The system catches 93.33% of abnormal heart sounds — meaning it would miss onl
     ],
     tags: ["Python", "scikit-learn", "XGBoost", "librosa", "SMOTE", "PyTorch"],
     links: {
-      github: "https://github.com/prajakta-bandgar",
+      github: "https://github.com/nightjaz",
     },
   },
 
@@ -189,7 +189,7 @@ Next milestone: first test flight.`,
     ],
     tags: ["Embedded C++", "Arduino", "Kalman Filter", "I2C", "TVC", "Telemetry"],
     links: {
-      github: "https://github.com/prajakta-bandgar",
+      github: "https://github.com/nightjaz",
     },
   },
 

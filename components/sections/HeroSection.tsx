@@ -139,7 +139,7 @@ export default function HeroSection() {
               View Resume
             </a>
             <a
-              href="https://github.com/prajakta-bandgar"
+              href="https://github.com/nightjaz"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 btn-outline-gold rounded-full flex items-center gap-2"
