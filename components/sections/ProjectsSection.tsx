@@ -76,7 +76,7 @@ const projects = [
     ],
     tags: ["Embedded C++", "Arduino", "Kalman Filter", "I2C"],
     status: "Deployed",
-    links: { github: "https://github.com/nightjaz" },
+    links: { github: "https://github.com/Rocketry-Avionics" },
     hue: "#d4a85a",
   },
   {

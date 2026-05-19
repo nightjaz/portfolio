@@ -189,7 +189,7 @@ Next milestone: first test flight.`,
     ],
     tags: ["Embedded C++", "Arduino", "Kalman Filter", "I2C", "TVC", "Telemetry"],
     links: {
-      github: "https://github.com/nightjaz",
+      github: "https://github.com/Rocketry-Avionics",
     },
   },
 

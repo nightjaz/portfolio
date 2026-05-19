@@ -76,7 +76,7 @@ export const projects: Project[] = [
     category: "hardware",
     techStack: ["Embedded C++", "Arduino", "Kalman Filter", "I2C", "BMP180", "MPU6050"],
     links: {
-      github: "https://github.com/nightjaz",
+      github: "https://github.com/Rocketry-Avionics",
     },
     featured: true,
   },
