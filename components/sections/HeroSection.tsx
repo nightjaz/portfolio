@@ -36,7 +36,7 @@ export default function HeroSection() {
 
       {/* Bottom fade into projects */}
       <div
-        className="absolute bottom-0 left-0 right-0 h-64 pointer-events-none z-20"
+        className="absolute bottom-0 left-0 right-0 h-32 md:h-64 pointer-events-none z-20"
         style={{
           background: "linear-gradient(to bottom, transparent 0%, rgba(10,18,40,0.6) 50%, #0a1228 100%)",
         }}
