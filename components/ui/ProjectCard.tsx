@@ -40,7 +40,7 @@ export default function ProjectCard({ project, index, onClick }: ProjectCardProp
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={onClick}
-      className="relative rounded-2xl overflow-hidden cursor-pointer transition-all duration-400 backdrop-blur-xl"
+      className="relative h-full rounded-2xl overflow-hidden cursor-pointer transition-all duration-400 backdrop-blur-xl"
       style={{
         background: isHovered
           ? "rgba(255,255,255,0.12)"
@@ -63,7 +63,7 @@ export default function ProjectCard({ project, index, onClick }: ProjectCardProp
       />
 
       {/* Content */}
-      <div className="p-6">
+      <div className="p-6 flex flex-col h-full">
         {/* Meta row */}
         <div className="flex justify-between font-mono text-[10px] tracking-[0.2em] uppercase mb-3">
           <span className="text-gold-shimmer">{project.chapter}</span>
@@ -75,8 +75,8 @@ export default function ProjectCard({ project, index, onClick }: ProjectCardProp
           {project.title}
         </h3>
 
-        {/* Description */}
-        <p className="body-clean text-text-secondary text-sm leading-relaxed mb-5">
+        {/* Description - flex-grow fills space, pushing metrics to consistent bottom position */}
+        <p className="body-clean text-text-secondary text-sm leading-relaxed mb-5 flex-grow">
           {project.description}
         </p>
 
@@ -96,47 +96,45 @@ export default function ProjectCard({ project, index, onClick }: ProjectCardProp
           </div>
         )}
 
-        {/* Stack tags */}
-        <div className="flex flex-wrap gap-2 mb-4">
+        {/* Stack tags - min-height ensures consistent spacing */}
+        <div className="flex flex-wrap gap-2 mb-4 min-h-[3.5rem] content-start">
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="font-mono text-[10px] px-3 py-1 border border-white/10 text-lavender-mist/80 tracking-wide rounded-full bg-white/5"
+              className="font-mono text-[10px] px-3 py-1 border border-white/10 text-lavender-mist/80 tracking-wide rounded-full bg-white/5 h-fit"
             >
               {tag}
             </span>
           ))}
         </div>
 
-        {/* Links */}
-        {project.links && (
-          <div className="flex gap-4 pt-3 border-t border-gold-shimmer/10">
-            {project.links.demo && (
-              <a
-                href={project.links.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                className="flex items-center gap-1.5 text-xs text-gold-shimmer hover:text-gold-bright transition-colors font-mono tracking-wide"
-              >
-                <ExternalLink size={12} />
-                Live
-              </a>
-            )}
-            {project.links.github && (
-              <a
-                href={project.links.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                className="flex items-center gap-1.5 text-xs text-text-secondary hover:text-gold-shimmer transition-colors font-mono tracking-wide"
-              >
-                <GithubIcon size={12} />
-                Code
-              </a>
-            )}
-          </div>
-        )}
+        {/* Links - min-height ensures cards with/without links align */}
+        <div className={`flex gap-4 pt-3 min-h-[2.5rem] ${project.links ? 'border-t border-gold-shimmer/10' : ''}`}>
+          {project.links?.demo && (
+            <a
+              href={project.links.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="flex items-center gap-1.5 text-xs text-gold-shimmer hover:text-gold-bright transition-colors font-mono tracking-wide"
+            >
+              <ExternalLink size={12} />
+              Live
+            </a>
+          )}
+          {project.links?.github && (
+            <a
+              href={project.links.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="flex items-center gap-1.5 text-xs text-text-secondary hover:text-gold-shimmer transition-colors font-mono tracking-wide"
+            >
+              <GithubIcon size={12} />
+              Code
+            </a>
+          )}
+        </div>
       </div>
 
       {/* Hover arrow */}

@@ -168,7 +168,7 @@ export default function ProjectsSection() {
 
           <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-8">
             <h2 className="heading-editorial text-4xl md:text-5xl lg:text-6xl text-text-primary leading-tight pb-2">
-              Top<br />
+              My top<br />
               <em className="italic text-gold-shimmer">projects.</em>
             </h2>
             <p className="text-text-secondary text-sm max-w-sm leading-relaxed lg:text-right">
