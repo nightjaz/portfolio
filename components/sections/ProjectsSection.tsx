@@ -115,7 +115,7 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="relative py-32 overflow-hidden bg-gradient-to-b from-[#0a1228] via-[#0e1838] to-[#101630]"
+      className="relative py-16 md:py-32 overflow-hidden bg-gradient-to-b from-[#0a1228] via-[#0e1838] to-[#101630]"
     >
       {/* Starfield effect */}
       <div className="absolute inset-0 pointer-events-none">

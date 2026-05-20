@@ -20,7 +20,7 @@ export default function HeroSection() {
   return (
     <section
       ref={ref}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-[85vh] md:min-h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Background Image - Cosmic Whales */}
       <motion.div className="absolute inset-0 -z-10" style={{ scale }}>

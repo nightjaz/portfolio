@@ -30,7 +30,7 @@ export default function Navigation() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -100, opacity: 0 }}
           transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="fixed top-6 left-1/2 -translate-x-1/2 z-50"
+          className="hidden md:block fixed top-6 left-1/2 -translate-x-1/2 z-50"
         >
           <div className="flex items-center gap-2 px-2 py-2 rounded-full bg-deep-space/60 backdrop-blur-xl border border-gold-shimmer/20 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
             <a

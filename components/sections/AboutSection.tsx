@@ -39,6 +39,15 @@ export default function AboutSection() {
         transition={{ duration: 0.6, delay: 0.2 }}
         className="relative z-20 ml-auto w-full md:w-[58%] lg:w-[60%] px-6 md:px-12 lg:px-16 py-20 md:py-24"
       >
+        {/* Mobile profile photo */}
+        <div className="md:hidden flex justify-center mb-8">
+          <img
+            src="/prajakta.png"
+            alt="Prajakta Bandgar"
+            className="w-16 h-16 rounded-full object-cover border-2 border-[#152040]/20"
+          />
+        </div>
+
         <h2 className="heading-editorial text-4xl md:text-5xl lg:text-6xl text-[#152040] mb-10 md:mb-12">
           About me
         </h2>
