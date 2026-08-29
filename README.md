@@ -16,6 +16,14 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Adding a blog post
+
+Blog content lives in `data/blogPosts.ts`. Add a new object to the top of the
+`blogPosts` array with a unique `slug`, title, excerpt, date, read time, tags,
+and content blocks. The `/blog` index and `/blog/[slug]` post page are generated
+automatically. Supported content block types are `paragraph`, `heading`,
+`list`, `quote`, and `code`.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
